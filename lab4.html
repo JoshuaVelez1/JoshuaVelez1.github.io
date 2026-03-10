@@ -31,6 +31,12 @@
 
         var arrivalDate = new Date();
         arrivalDate.setDate(arrivalDate.getDate() + 7);
+
+        document.getElementById("greeting").innerHTML = greeting;
+        document.getElementById("name").innerHTML = "Name: " + customerName;
+        document.getElementById("item").innerHTML = "Item Requested: " + itemRequested;
+        document.getElementById("quantity").innerHTML = "Number of Items: " + numberOfItems;
+        document.getElementById("arrival").innerHTML = "Expected Arrival Date: " + arrivalDate.toDateString();
     </script>
 
 </body>
