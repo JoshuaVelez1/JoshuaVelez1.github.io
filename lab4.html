@@ -17,6 +17,17 @@
         var itemRequested = prompt("Enter the item requested");
         var numberOfItems = prompt("Enter the number of items");
 
+        var today = new Date();
+        var hour = today.getHours();
+        var greeting = "";
+
+        if (hour < 12) {
+            greeting = "Good Morning " + customerName + ", Thank you for Ordering!";
+        } else if (hour < 18) {
+            greeting = "Good Afternoon " + customerName + ", Thank you for Ordering!";
+        } else {
+            greeting = "Good Evening " + customerName + ", Thank you for Ordering!";
+
     </script>
 
 </body>
