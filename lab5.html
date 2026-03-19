@@ -38,6 +38,16 @@
         var dob = document.getElementById("dob").value;
 
         var output = document.getElementById("output");
+
+        if (firstName === "" || lastName === "" || email === "" || password === "" || dob === "") {
+        output.innerHTML = "Registration Failed — all fields required";
+        return;
+        }   
+
+        if (password.indexOf("!") === -1 && password.indexOf("?") === -1) {
+        output.innerHTML = "Registration Failed — password must contain ! or ?";
+        return;
+}
     }
     </script>
 </body>
