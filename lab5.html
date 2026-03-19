@@ -47,7 +47,24 @@
         if (password.indexOf("!") === -1 && password.indexOf("?") === -1) {
         output.innerHTML = "Registration Failed — password must contain ! or ?";
         return;
-}
+        }
+        var user = {
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            password: "*".repeat(password.length),
+            dob: dob
+        };
+
+        output.innerHTML =
+        "Registration Successful<br>" +
+        "First Name: " + user.firstName + "<br>" +
+        "Last Name: " + user.lastName + "<br>" +
+        "Email: " + user.email + "<br>" +
+        "Password: " + user.password + "<br>" +
+        "DOB: " + user.dob;
+
+
     }
     </script>
 </body>
