@@ -54,14 +54,16 @@
         var output = document.getElementById("output");
 
         if (firstName === "" || lastName === "" || email === "" || password === "" || dob === "") {
-        output.innerHTML = "Registration Failed — all fields required";
+        output.className = "alert alert-danger";
+        output.innerHTML = "Registration Failed - all fields required";
         return;
-        }   
+}
 
         if (password.indexOf("!") === -1 && password.indexOf("?") === -1) {
-        output.innerHTML = "Registration Failed — password must contain ! or ?";
+        output.className = "alert alert-danger";
+        output.innerHTML = "Registration Failed - password must contain ! or ?";
         return;
-        }
+}
         var user = {
             firstName: firstName,
             lastName: lastName,
@@ -70,8 +72,9 @@
             dob: dob
         };
 
+        output.className = "alert alert-success";
         output.innerHTML =
-        "Registration Successful<br>" +
+        "<strong>Registration Successful</strong><br>" +
         "First Name: " + user.firstName + "<br>" +
         "Last Name: " + user.lastName + "<br>" +
         "Email: " + user.email + "<br>" +
