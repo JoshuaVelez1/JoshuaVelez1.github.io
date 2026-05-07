@@ -1,21 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Details</title>
+  <meta charset="UTF-8">
+  <title>Product Details | BoostCart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body onload="loadProductDetails()">
 
-<div class="container">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
 
-<h2>Product Details</h2>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNav">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
 
-<div id="productDetails"></div>
+      <a class="navbar-brand" href="index.html">BoostCart</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">Featured</a></li>
+        <li><a href="search.html">Search Products</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<div class="container main-container">
+
+  <a href="search.html" class="btn btn-default back-btn">← Back to Search</a>
+
+  <div class="jumbotron text-center hero">
+    <h1>Product Details</h1>
+    <p>Detailed product information from the REST API.</p>
+  </div>
+
+  <div id="message"></div>
+  <div id="productDetails" class="row"></div>
 
 </div>
 
+<footer class="text-center">
+  <p>BoostCart Final Project | Product Details</p>
+</footer>
+
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
 <script src="js/details.js"></script>
 
 </body>
